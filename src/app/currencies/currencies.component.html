@@ -1,28 +1,31 @@
-<p>
-  currencies works!
-</p>
-
 <h2>Generate</h2>
-  {{currencies2.timestamp}}
-  {{currencies2 .quotes}}
+<div class="row text-center">
+  <!-- {{currencies2.timestamp}}
+  {{currencies2 .quotes}} -->
+  <div class="col-lg-3 text-center">
+    <div *ngFor="let entry of currencies2.quotes | values">
+      <div class="row well-red top-buffer">
+        <div class="col-lg-12 btn btn-default">
+          <div class="col-lg-6 text-center well well-blue">
+            Key: {{entry.key}}
+          </div>
+          <div class="col-lg-6 text-center well well-green">
+            Value: {{entry.value}}
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-  <!-- <div *ngFor="let value of currencies2.quotes | values">
-    {{value}} - {{value[key]}}
-  </div> -->
-
-  <div *ngFor="let entry of currencies2.quotes | values">
-    Key: {{entry.key}}, value: {{entry.value}}
+    <!--
+    <ul>
+    <div *ngFor="let currency of hack(currencies2.quotes)" >
+      <li>
+         <a routerLink="#">eee
+            <span>{{currency}}</span>
+         </a>
+      </li>
+    </div>
+    </ul>
+    -->
   </div>
-
-  <!--
-  <ul>
-  <div *ngFor="let currency of hack(currencies2.quotes)" >
-    <li>
-       <a routerLink="#">eee
-          <span>{{currency}}</span>
-       </a>
-    </li>
-  </div>
-  </ul>
-  -->
+</div>

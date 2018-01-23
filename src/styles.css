@@ -1,2 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("css/bootstrap.css");
+
+.well-blue{
+    background: rgb(22, 105, 173);
+}
+
+.well-green{
+    background: rgb(66, 244, 72);
+}
+
+.well-red{
+    background: rgb(226, 29, 92);
+    box-sizing: border-box;
+}
+
+.top-buffer { margin-top:20px; }
